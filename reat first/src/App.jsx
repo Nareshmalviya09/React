@@ -10,6 +10,7 @@ function App() {
     <Navbar/>
     <div>
       <h1 className="heading">Susbcribe</h1>
+      <h1 className="navbar">Susbcribe</h1>
     </div>
     </>
   )

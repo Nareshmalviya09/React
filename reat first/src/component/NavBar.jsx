@@ -1,13 +1,12 @@
 import React from 'react'
-import './css/Navbar.css'
+import navbar from './css/NavBar.module.css'
+function NavBar() {
+  return (
+    <div>
 
-const Navbar = ()=>
-{
-    return(
-        
-        <div className='navbar'>
-            Navbar
-        </div>
-    )
+        <h1 className={navbar.navbar}>NavBar</h1>
+    </div>
+  )
 }
-export default Navbar
+
+export default NavBar
