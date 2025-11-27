@@ -1,15 +1,22 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import {  BrowserRouter , router, Route, Routes} from "react-router-dom"
  
 import Navbar from './component/Navbar'
+import { Layout } from './pages/Layout'
 
 function App() { 
   return (
-    <>
-     <Navbar/>
-       <h1> React router Dom</h1>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/'element={<Layout/>}>
+      <Route index elemen={<Home/>}/>
+      <Route path='/about' elemen={<About/>}/>
+      <Route path='' elemen={<Contact/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
