@@ -7,11 +7,14 @@ import Probs from './component/probs';
 
 function App() {
    const issubscribe =true;
-   
+    let link1="Home" 
+   let link2="Contact Us" 
+   let link3="Youtube" 
+   let link4="Courses"
 
   return (
     <>    
-      <Navbar/>
+      <Navbar link1={link1} link2={link2} link3={link3} link4={link4}/>
       <Probs/>
       
       {

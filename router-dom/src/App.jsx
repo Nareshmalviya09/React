@@ -1,23 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import {  BrowserRouter , router, Route, Routes} from "react-router-dom"
- 
-import Navbar from './component/Navbar'
-import { Layout } from './pages/Layout'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() { 
+import Navbar from "./component/Navbar";
+import { Layout } from "./pages/Layout";
+
+// Import your pages
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/'element={<Layout/>}>
-      <Route index elemen={<Home/>}/>
-      <Route path='/about' elemen={<About/>}/>
-      <Route path='' elemen={<Contact/>}/>
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
